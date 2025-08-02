@@ -121,8 +121,9 @@ body {
   background-color: #1f1e1b;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 10px;
+  padding: 0 3em;
 }
 
 .delete {
@@ -140,6 +141,7 @@ body {
 
 .delete:hover {
   background-color: rgba(27, 26, 23, 0);
+  cursor: pointer;
 }
 
 .task-title {
@@ -156,4 +158,35 @@ body {
 
 .file-content {
   width: 265px;
+}
+
+/* Advance */
+
+.advance-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.advance {
+  gap: 5px;
+  height: 100%;
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.advance > div {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #a35709;
 }
