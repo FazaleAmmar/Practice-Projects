@@ -15,9 +15,8 @@ contentFile.addEventListener("click", function () {
   advanceDiv.classList.toggle("active");
 
   if (advanceDiv.classList.contains("active")) {
-    contentFile.style.height = "60%";
-    advanceDiv.classList.toggle("deactive");
+    advanceDiv.style.display = "flex";
   } else {
-    contentFile.style.height = "72px";
+    advanceDiv.style.display = "none";
   }
 });

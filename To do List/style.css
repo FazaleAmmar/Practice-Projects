@@ -168,6 +168,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  /* display: none; */
 }
 
 .advance {
@@ -189,4 +190,6 @@ body {
   justify-content: center;
   border-radius: 10px;
   border: 2px solid #a35709;
+  cursor: pointer;
+  font-size: 13px;
 }
