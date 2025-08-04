@@ -91,8 +91,12 @@ clear.addEventListener("click", () => {
 
 const cross = document.querySelector(".cross");
 cross.addEventListener("click", () => {
-  backspace();
+  removeLastChar();
 });
+
+function removeLastChar() {
+  input.value = input.value.slice(0, -1);
+}
 
 function calculate() {
   try {
@@ -100,10 +104,6 @@ function calculate() {
   } catch (error) {
     output.value = "Error";
   }
-}
-
-function backspace() {
-  input.value = input.value.slice(0, -1);
 }
 
 function clearAll() {
@@ -122,14 +122,15 @@ function enter(event) {
     calculate();
   }
 }
-document.addEventListener("keyup", backspace);
+
+document.addEventListener("keydown", backspace);
+
 function backspace(event) {
   if (event.key === "Backspace" && event.shiftKey) {
     clearAll();
   }
 }
-
-// visible keys
+// visible keys written with chat gpt
 
 const display = document.getElementById("keyDisplay");
 let timeoutId;
@@ -144,12 +145,11 @@ document.addEventListener("keydown", (e) => {
 
   const keyName = e.key === " " ? "Space" : e.key;
 
-  // Avoid duplicates (e.g., "Shift" already shown, don't add again)
   if (!["Control", "Shift", "Alt", "Meta"].includes(keyName)) {
     keys.push(keyName);
   }
 
-  display.textContent = keys.join(" , ");
+  display.textContent = keys.join(" + ");
   display.style.opacity = 1;
 
   clearTimeout(timeoutId);
