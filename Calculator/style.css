@@ -95,3 +95,199 @@ main {
   overflow: hidden;
   box-shadow: 18px 20px 50px #004473;
 }
+
+#output-screen {
+  height: 30px;
+  position: absolute;
+  right: 1px;
+  top: 51px;
+  background-color: transparent;
+  border: none;
+  color: #818181;
+  font-size: 16px;
+  text-align: right;
+  outline: none;
+}
+
+#input-screen {
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  right: 1px;
+  top: 80px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  text-align: right;
+  outline: none;
+}
+
+.container {
+  height: 312px;
+  width: 230px;
+  border-radius: 10px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.elements {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #109dff;
+  background-color: #303136;
+  border: none;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.zero {
+  height: 50px;
+  width: 110px;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+.dot {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  font-size: 30px;
+  bottom: 0;
+  left: 115px;
+}
+
+.number-container {
+  height: 170px;
+  width: 166px;
+  bottom: 70px;
+  position: absolute;
+}
+
+.numbers {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+}
+
+.one {
+  left: 0px;
+  bottom: 0px;
+}
+
+.two {
+  left: 58px;
+  bottom: 0px;
+}
+
+.three {
+  right: 0;
+  bottom: 0px;
+}
+
+.four {
+  left: 0px;
+  bottom: 60px;
+}
+
+.five {
+  left: 58px;
+  bottom: 60px;
+}
+
+.six {
+  right: 0;
+  bottom: 60px;
+}
+
+.seven {
+  left: 0px;
+  top: 0;
+}
+
+.eight {
+  left: 58px;
+  top: 0;
+}
+
+.nine {
+  right: 0;
+  top: 0;
+}
+
+.equal {
+  height: 90px;
+  width: 55px;
+  border-radius: 10px;
+  background-color: #109dff;
+  color: #b2daff;
+  bottom: 0;
+  right: 0;
+}
+
+.plus {
+  height: 80px;
+  width: 55px;
+  background-color: #005db2;
+  color: #339dff;
+  border-radius: 10px;
+  bottom: 100px;
+  right: 0;
+}
+
+.minus {
+  right: 2px;
+  top: 72px;
+  background-color: #005db2;
+  color: #339dff;
+}
+
+.menu {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items {
+  border: none;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multiply {
+  left: 0;
+  background-color: #005db2;
+  color: #339dff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divide {
+  background-color: #005db2;
+  color: #339dff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross {
+  background-color: #616161;
+  color: #a5a5a5;
+  font-size: 15px;
+}
+
+.clear {
+  background-color: #616161;
+  color: #a5a5a5;
+  font-size: 20px;
+}
