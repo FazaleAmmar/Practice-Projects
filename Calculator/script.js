@@ -86,7 +86,11 @@ divide.addEventListener("click", () => {
 
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
-  clearInput();
+  if (input.value === "") {
+    clearAll();
+  } else {
+    clearInput();
+  }
 });
 
 const cross = document.querySelector(".cross");
