@@ -178,11 +178,7 @@
 }
 
 .songButtons img {
-  width: fit-content;
-  height: fit-content;
-  border-radius: 50%;
-  border: 1.5px solid black;
-  padding: 2px;
+  cursor: pointer;
 }
 
 .songButtons {
@@ -233,21 +229,39 @@
 }
 
 .seekBar {
-  height: 2px;
-  width: 95%;
-  border: 2px solid white;
+  height: 4px;
+  width: 95.7%;
   position: absolute;
   bottom: 0;
-  left: 20px;
+  left: 17px;
   border-radius: 10px;
+  margin: 3px -3px 3px 0px;
+  background: white;
 }
 
 .circle {
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
   background-color: white;
   position: relative;
-  top: -8px;
-  left: -2px;
+  top: -6px;
+  left: -1%;
+  transition: left 0.5s;
+}
+
+.seekBar:hover {
+  .circle {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+  }
+  cursor: pointer;
+}
+
+.aboveBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
