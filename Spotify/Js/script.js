@@ -24,8 +24,7 @@ async function main() {
   for (const song of songs) {
     songUL.innerHTML =
       songUL.innerHTML +
-      `<li> 
-      <img src="Images/music.svg" alt="">
+      `<li> <img src="Images/music.svg" alt="">
                 <div class="info">
                   <div>${song.replaceAll("/", "")}</div>
                   <div>Ammar</div>
@@ -33,16 +32,7 @@ async function main() {
                 <div class="playNow">
                   <span>play now</span>
                 <img class ="invert" src="Images/play.svg" alt="">
-                </div>
-        </li>`;
+                </div> </li>`;
   }
-
-  var audio = new Audio(songs[0]);
-  audio.play();
-
-  audio.addEventListener("loadeddata", () => {
-    console.log(audio.duration, audio.currentTime, audio.currentSrc);
-  });
 }
-
 main();

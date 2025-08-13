@@ -169,10 +169,20 @@
 
 .playBar {
   position: fixed;
-  bottom: 25px;
+  bottom: 10px;
   width: 70%;
   padding: 12px;
   background-color: green;
+  border-radius: 30px;
+  height: 30px;
+}
+
+.songButtons img {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  padding: 2px;
 }
 
 .songButtons {
@@ -182,7 +192,7 @@
 }
 
 .songList {
-  height: 52vh;
+  height: 50vh;
   overflow: auto;
 }
 
@@ -220,4 +230,24 @@
   width: 18px;
   border: 0.5px solid black;
   border-radius: 50%;
+}
+
+.seekBar {
+  height: 2px;
+  width: 95%;
+  border: 2px solid white;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  border-radius: 10px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -8px;
+  left: -2px;
 }
