@@ -95,5 +95,13 @@ async function main() {
     let percent = (e.offsetX / e.target.clientWidth) * 100;
     currentSong.currentTime = (percent / 100) * duration;
   });
+
+  document.querySelector(".menu").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "0";
+  });
+
+  document.querySelector(".close").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "-100%";
+  });
 }
 main();

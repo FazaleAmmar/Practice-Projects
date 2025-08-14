@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  height: 100vh;
+}
+
 .left {
   width: 25vw;
   padding: 10px;
@@ -13,6 +17,10 @@
 
 .right {
   width: 75vw;
+}
+
+.left .home {
+  height: 17%;
 }
 
 .home ul li {
@@ -38,6 +46,7 @@
 .library {
   min-height: 73.1vh;
   position: relative;
+  padding: 10px 10px 0 10px;
 }
 
 .heading img {
@@ -73,6 +82,11 @@
 .header > * {
   padding: 14px;
 }
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .spotifyPlaylist {
   padding: 16px;
@@ -84,11 +98,11 @@
   flex-wrap: wrap;
   gap: 10px;
   max-height: 65vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .card {
-  width: 170px;
+  width: 10.626rem;
   padding: 10px;
   border-radius: 5px;
   background-color: #252525;
@@ -190,6 +204,7 @@
 .songList {
   height: 50vh;
   overflow: auto;
+  padding-right: 10px;
 }
 
 .songList ul li {
@@ -220,6 +235,14 @@
 .songList .info {
   font-size: 12px;
   width: 70%;
+}
+
+.songInfo {
+  color: black;
+}
+
+.songTime {
+  color: black;
 }
 
 .playNow img {
@@ -264,4 +287,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+}
+
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+.close {
+  display: none;
 }

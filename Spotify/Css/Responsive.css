@@ -1,0 +1,64 @@
+.left {
+  position: absolute;
+  transition: left 0.5s;
+  width: 80%;
+  left: -100%;
+  z-index: 1;
+  background-color: black;
+}
+
+.footer {
+  width: 95%;
+}
+
+.right {
+  width: 100vw;
+  margin: 0;
+}
+
+.aboveBar {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.playBar {
+  width: 88%;
+}
+
+.seekBar {
+  width: 92%;
+}
+
+.menu {
+  display: inline-block;
+}
+
+.songList {
+  height: 56vh;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.cardContainer {
+  justify-content: center;
+  margin: 30px 0 0 0;
+}
+
+.playBar {
+  height: fit-content;
+}
+
+.card {
+  width: 20rem;
+  height: 19rem;
+}
+
+.play {
+  top: 300px;
+}
