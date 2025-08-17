@@ -138,7 +138,7 @@
 
 .card:hover .play {
   opacity: 1;
-  transform: translateY(-15px);
+  transform: translateY(-30px);
 }
 
 .signupBtn {
@@ -204,6 +204,7 @@
 .songList {
   height: 50vh;
   overflow: auto;
+  scroll-behavior: smooth;
   padding-right: 10px;
 }
 
@@ -239,10 +240,14 @@
 
 .songInfo {
   color: black;
+  width: 40%;
+  text-align: start;
 }
 
 .songTime {
   color: black;
+  width: 40%;
+  text-align: end;
 }
 
 .playNow img {

@@ -5,6 +5,18 @@
   left: -100%;
   z-index: 1;
   background-color: black;
+  border-radius: 20px;
+}
+
+.home {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    calc(100% - 40px) 40px,
+    100% 40px,
+    100% 100%,
+    0 100%
+  );
 }
 
 .footer {
@@ -34,14 +46,14 @@
 }
 
 .songList {
-  height: 56vh;
+  height: 50vh;
 }
 
 .close {
   display: block;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
 }
 
@@ -56,9 +68,26 @@
 
 .card {
   width: 20rem;
-  height: 19rem;
+  height: 28rem;
+}
+
+.card:hover .play {
+  opacity: 1;
+  transform: translateY(-60px);
 }
 
 .play {
   top: 300px;
+}
+
+.library {
+  min-height: 67vh;
+}
+
+.songInfo {
+  text-align: start;
+}
+
+.songTime {
+  text-align: end;
 }

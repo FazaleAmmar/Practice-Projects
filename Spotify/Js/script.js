@@ -1,4 +1,5 @@
 let currentSong = new Audio();
+let songs;
 
 async function getSongs() {
   let a = await fetch("http://127.0.0.1:5500/songs/");
@@ -17,18 +18,22 @@ async function getSongs() {
 }
 
 let playMusic = (track, pause = false) => {
-  currentSong.src = /songs/ + track;
+  currentSong.src = /songs/ + track.trim();
   if (!pause) {
     currentSong.play();
     play.src = "Images/pause.svg";
   }
-  document.querySelector(".songInfo").innerHTML = track;
+  document.querySelector(".songInfo").innerHTML = track
+    .replaceAll("%20", " ")
+    .replaceAll("/", "");
   document.querySelector(".songTime").innerHTML = "00:00 / 00:00";
 };
 
 async function main() {
-  let songs = await getSongs();
-  playMusic(songs[0].replaceAll("/", ""), true);
+  songs = await getSongs();
+  if (songs.length > 0) {
+    playMusic(songs[0], true);
+  }
 
   let songUL = document
     .querySelector(".songList")
@@ -38,7 +43,7 @@ async function main() {
       songUL.innerHTML +
       `<li> <img src="Images/music.svg" alt="">
                 <div class="info">
-                  <div>${song.replaceAll("/", "")}</div>
+                  <div>${song.replaceAll("%20", " ").replaceAll("/", "")}</div>
                   <div>Ammar</div>
                 </div>
                 <div class="playNow">
@@ -66,6 +71,10 @@ async function main() {
   });
 
   currentSong.addEventListener("timeupdate", () => {
+    if (isNaN(seconds) || seconds < 0) {
+      return "00:00";
+    }
+
     let currentTime = currentSong.currentTime;
     let duration = currentSong.duration;
     let minutes = Math.floor(currentTime / 60);
@@ -102,6 +111,23 @@ async function main() {
 
   document.querySelector(".close").addEventListener("click", () => {
     document.querySelector(".left").style.left = "-100%";
+  });
+
+  previous.addEventListener("click", () => {
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+    if (index > 0) {
+      playMusic(songs[index - 1], false);
+    }
+  });
+
+  next.addEventListener("click", () => {
+    currentSong.pause();
+    let index = songs.findIndex(
+      (song) => song === currentSong.src.split("/songs/")[1]
+    );
+    if (index < songs.length - 1) {
+      playMusic(songs[index + 1], false);
+    }
   });
 }
 main();
