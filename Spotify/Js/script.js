@@ -129,5 +129,13 @@ async function main() {
       playMusic(songs[index + 1], false);
     }
   });
+
+  document.querySelector(".volume img").addEventListener("click", () => {
+    if (document.querySelector(".range").style.display == "none") {
+      document.querySelector(".range").style.display = "flex";
+    } else {
+      document.querySelector(".range").style.display = "none";
+    }
+  });
 }
 main();
