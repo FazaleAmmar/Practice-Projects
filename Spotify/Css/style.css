@@ -79,7 +79,7 @@
   background-color: rgb(34, 34, 34);
 }
 
-.header>* {
+.header > * {
   padding: 14px;
 }
 
@@ -109,9 +109,10 @@
   background-color: #252525;
   position: relative;
   font-size: 13px;
+  cursor: pointer;
 }
 
-.card>* {
+.card > * {
   padding-top: 10px;
 }
 
@@ -158,7 +159,7 @@
   transition: all 0.1s ease-in-out;
 }
 
-.buttons>* {
+.buttons > * {
   margin: 0 10px;
 }
 
@@ -307,21 +308,14 @@
 
 .volume {
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.range {
-  transform: rotate(90deg);
-  display: none;
+  gap: 10px;
+  display: flex;
+  margin-left: 10px;
 }
 
 .range input {
-  position: absolute;
-  top: -2px;
-  left: -11rem;
-  height: 0.5rem;
+  width: 6rem;
+  cursor: pointer;
 }

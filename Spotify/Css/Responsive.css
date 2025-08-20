@@ -9,12 +9,14 @@
 }
 
 .home {
-  clip-path: polygon(0 0,
-      calc(100% - 40px) 0,
-      calc(100% - 40px) 40px,
-      100% 40px,
-      100% 100%,
-      0 100%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    calc(100% - 40px) 40px,
+    100% 40px,
+    100% 100%,
+    0 100%
+  );
 }
 
 .footer {
@@ -65,8 +67,8 @@
 }
 
 .card {
-  width: 20rem;
-  height: 28rem;
+  width: 10rem;
+  height: 17rem;
 }
 
 .card:hover .play {
@@ -75,7 +77,7 @@
 }
 
 .play {
-  top: 300px;
+  top: 200px;
 }
 
 .library {
@@ -88,19 +90,4 @@
 
 .songTime {
   text-align: center;
-}
-
-.range {
-  transform: rotate(0deg);
-}
-
-.range input {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.volume {
-  flex-direction: row;
-  gap: 10px;
 }
