@@ -202,6 +202,29 @@ async function main() {
     .getElementsByTagName("input")[0]
     .addEventListener("input", (e) => {
       currentSong.volume = e.target.value / 100;
+      if (e.target.value < 50) {
+        document.querySelector(".volume img").src = "Images/lowVolume.svg";
+      } else {
+        document.querySelector(".volume img").src = "Images/volume.svg";
+      }
     });
+
+  // mute feature by clicking the volume button and add
+
+  document.querySelector(".volume img").addEventListener("click", () => {
+    if (currentSong.muted) {
+      currentSong.muted = false;
+      document.querySelector(".volume img").src = "Images/volume.svg";
+      document
+        .querySelector(".range")
+        .getElementsByTagName("input")[0].value = 5;
+    } else {
+      currentSong.muted = true;
+      document.querySelector(".volume img").src = "Images/mute.svg";
+      document
+        .querySelector(".range")
+        .getElementsByTagName("input")[0].value = 0;
+    }
+  });
 }
 main();
