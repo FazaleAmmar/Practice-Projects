@@ -98,7 +98,7 @@ async function main() {
                   />
                 </svg>
               </div>
-              <img src="/songs/${folder}/cover.jpeg" alt="" />
+              <img src="/songs/${folder}/cover.png" alt="" />
               <h2>${json.title}</h2>
               <p>${json.description}</p>
             </div>`;
@@ -111,6 +111,7 @@ async function main() {
     Array.from(document.getElementsByClassName("card")).forEach((e) => {
       e.addEventListener("click", async (item) => {
         await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+        playMusic(songs[0]);
       });
     });
   }
