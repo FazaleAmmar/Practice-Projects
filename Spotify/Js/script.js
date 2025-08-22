@@ -98,7 +98,7 @@ async function main() {
                   />
                 </svg>
               </div>
-              <img src="/songs/${folder}/cover.png" alt="" />
+              <img src="/songs/${folder}/cover.jpeg" alt="" />
               <h2>${json.title}</h2>
               <p>${json.description}</p>
             </div>`;

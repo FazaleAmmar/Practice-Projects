@@ -38,7 +38,8 @@
 }
 
 .seekBar {
-  width: 92%;
+  width: 90%;
+  margin-left: 2px;
 }
 
 .menu {
@@ -85,7 +86,7 @@
 }
 
 .songInfo {
-  text-align: start;
+  text-align: center;
 }
 
 .songTime {

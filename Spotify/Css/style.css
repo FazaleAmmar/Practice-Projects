@@ -121,6 +121,14 @@
   object-fit: contain;
 }
 
+.card p {
+  font-size: 12px;
+}
+
+card h2 {
+  font-size: 15px;
+}
+
 .play {
   height: 28px;
   width: 28px;
