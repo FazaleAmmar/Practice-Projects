@@ -63,3 +63,11 @@
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
 }
+
+span {
+  color: #b8b8c7;
+}
+
+.border-grey {
+  border: 1px solid grey;
+}

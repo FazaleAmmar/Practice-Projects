@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #0a0a12;
+  color: #eaeaea;
 }
 
 .container {
@@ -13,14 +16,23 @@
 .left {
   width: 25vw;
   padding: 10px;
+  background: #151527;
+  color: #e0e0e0;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .right {
   width: 75vw;
+  margin: 15px 0px;
+  position: relative;
+  background-color: #0d0d1a;
 }
 
 .left .home {
   height: 17%;
+  background: #151527;
+  color: #e0e0e0;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .home ul li {
@@ -30,6 +42,14 @@
   gap: 15px;
   padding-top: 14px;
   font-weight: bold;
+  color: #bdbddb;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.home ul li:hover {
+  color: #a020f0;
+  text-shadow: 0 0 8px #a020f0;
 }
 
 .heading {
@@ -47,6 +67,9 @@
   min-height: 73.1vh;
   position: relative;
   padding: 10px 10px 0 10px;
+  background: #151527;
+  color: #e0e0e0;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .heading img {
@@ -66,17 +89,20 @@
   color: grey;
   text-decoration: none;
   padding-bottom: 10px;
+  color: #bdbddb;
+  transition: 0.3s ease;
 }
 
-.right {
-  margin: 15px 0px;
-  position: relative;
+.footer a:hover {
+  color: #a020f0;
+  text-shadow: 0 0 8px #a020f0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(34, 34, 34);
+  background: #121224;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header > * {
@@ -89,14 +115,19 @@
   align-items: center;
 }
 
+.nav * {
+  cursor: pointer;
+}
+
 .spotifyPlaylist {
   padding: 16px;
 }
 
 .cardContainer {
-  margin: 30px 0 30px 30px;
+  margin: 20px 0 30px 30px;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 15px;
   gap: 10px;
   max-height: 63vh;
   overflow-y: auto;
@@ -104,12 +135,19 @@
 
 .card {
   width: 10.626rem;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #252525;
   position: relative;
   font-size: 13px;
   cursor: pointer;
+  background: #1a1a2e;
+  border-radius: 14px;
+  padding: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  background: #2a2a44;
+  box-shadow: 0 0 16px #a020f0;
+  transform: scale(1.03);
 }
 
 .card > * {
@@ -123,10 +161,12 @@
 
 .card p {
   font-size: 12px;
+  color: #9d9db5;
 }
 
 card h2 {
   font-size: 15px;
+  color: #ffffff;
 }
 
 .play {
@@ -152,19 +192,21 @@ card h2 {
 }
 
 .signupBtn {
-  background-color: rgb(34, 34, 34);
-  color: rgb(84, 79, 79);
+  background-color: #121224;
+  color: #a020f0;
   cursor: pointer;
   border: none;
   outline: none;
   font-weight: bold;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 .signupBtn:hover {
   transform: scale(1.05);
-  color: white;
-  transition: all 0.1s ease-in-out;
+  background-color: #121224;
+  color: #7b1fa2;
+  text-shadow: 0 0 12px #a020f0;
 }
 
 .buttons > * {
@@ -172,9 +214,11 @@ card h2 {
 }
 
 .loginBtn {
-  background-color: white;
-  border-radius: 20px;
-  color: black;
+  background: #a020f0;
+  color: white;
+  border-radius: 25px;
+  padding: 6px 16px;
+  transition: 0.3s;
   font-weight: bold;
   border: none;
   outline: none;
@@ -186,9 +230,8 @@ card h2 {
 
 .loginBtn:hover {
   transform: scale(1.05);
-  font-weight: bolder;
-  color: black;
-  transition: all 0.1s ease-in-out;
+  background: #7b1fa2;
+  box-shadow: 0 0 12px #a020f0;
 }
 
 .playBar {
@@ -196,13 +239,31 @@ card h2 {
   bottom: 10px;
   width: 70%;
   padding: 12px;
-  background-color: green;
   border-radius: 30px;
   height: 30px;
+  background: #141426;
+  color: #eaeaea;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -2px 20px rgba(160, 32, 240, 0.2);
 }
 
 .songButtons img {
   cursor: pointer;
+  height: 20px;
+  transition: 0.3s ease;
+}
+
+.songButtons img:hover {
+  fill: #a020f0;
+  filter: drop-shadow(0 0 6px #a020f0);
+  transform: scale(1.1);
+}
+
+.songButtons img:active {
+  fill: #a020f0 !important;
+  filter: drop-shadow(0 0 6px #a020f0) drop-shadow(0 0 12px #6a0dad);
+  transform: scale(0.95);
 }
 
 .songButtons {
@@ -226,9 +287,17 @@ card h2 {
   padding: 12px;
   margin: 12px 0;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid rgba(136, 135, 135, 0.205);
   font-size: 12px;
   justify-content: space-between;
+  color: #bdbddb;
+  transition: 0.3s ease;
+}
+
+.songList ul li:hover {
+  color: #a020f0;
+  text-shadow: 0 0 8px #a020f0;
+  transform: scale(1.02);
 }
 
 .playNow {
@@ -249,20 +318,19 @@ card h2 {
 }
 
 .songInfo {
-  color: black;
+  color: #ffffff;
   width: 40%;
   text-align: start;
 }
 
 .songTime {
-  color: black;
+  color: #ffffff;
   width: 40%;
   text-align: end;
 }
 
 .playNow img {
   width: 18px;
-  border: 0.5px solid black;
   border-radius: 50%;
 }
 
@@ -273,8 +341,9 @@ card h2 {
   bottom: 0;
   left: 17px;
   border-radius: 10px;
-  margin: 3px -3px 3px 0px;
-  background: white;
+  background-color: #eaeaea;
+  margin: 0 8px;
+  transition: 0.3s;
 }
 
 .circle {
@@ -284,7 +353,7 @@ card h2 {
   background-color: white;
   position: relative;
   top: -6px;
-  left: -1%;
+  left: -1px;
   transition: left 0.5s;
 }
 
@@ -293,8 +362,10 @@ card h2 {
     transform: scale(1.2);
     transition: all 0.1s ease-in-out;
     cursor: pointer;
+    background-color: #a020f0;
   }
-
+  background-color: #a020f0;
+  box-shadow: 0 0 8px #a020f0;
   cursor: pointer;
 }
 
@@ -308,6 +379,7 @@ card h2 {
 .menu {
   cursor: pointer;
   display: none;
+  filter: sepia(100%) hue-rotate(277deg) brightness(1.6);
 }
 
 .close {
@@ -323,7 +395,98 @@ card h2 {
   margin-left: 10px;
 }
 
-.range input {
-  width: 6rem;
+.volume img {
+  transition: 0.3s ease;
+}
+
+.volume img:hover {
+  fill: #a020f0;
+  filter: drop-shadow(0 0 6px #a020f0);
+  transform: scale(1.1);
+}
+
+.volume img:active {
+  fill: #7b1fa2;
+  filter: drop-shadow(0 0 10px #7b1fa2);
+  transform: scale(0.95);
+}
+
+.range input[type="range"] {
+  width: 100%;
+  height: 4px;
+  background: #333;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.range input[type="range"]:hover {
+  transform: scale(1.1);
   cursor: pointer;
+}
+
+.range input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #a020f0;
+  box-shadow: 0 0 8px #a020f0;
+  cursor: pointer;
+}
+.range input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #a020f0, #6a0dad);
+  height: 4px;
+  border-radius: 4px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 6px;
+  background: linear-gradient(90deg, #8a2be2, #ff00ff);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, #8a2be2, #ff00ff);
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #1e90ff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 0 0 10px #a020f0;
+  transition: 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #a020f0;
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #1e90ff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #a020f0;
+  transition: 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #a020f0;
+  transform: scale(1.1);
 }

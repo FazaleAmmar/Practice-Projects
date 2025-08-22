@@ -33,13 +33,9 @@
   gap: 15px;
 }
 
-.playBar {
-  width: 88%;
-}
-
 .seekBar {
   width: 90%;
-  margin-left: 2px;
+  margin-left: 12px;
 }
 
 .menu {
@@ -61,15 +57,21 @@
 .cardContainer {
   justify-content: center;
   margin: 30px 0 0 0;
+  padding-top: 15px;
 }
 
 .playBar {
   height: fit-content;
+  width: 88%;
 }
 
 .card {
   width: 10rem;
   height: 17rem;
+}
+
+.card p {
+  font-size: 10px;
 }
 
 .card:hover .play {
