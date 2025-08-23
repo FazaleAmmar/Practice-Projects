@@ -1,8 +1,16 @@
+/* ========== UTILITY CLASSES ========== */
+
+/* Borders */
 .border {
   border: 2px solid red;
   margin: 10px;
 }
 
+.border-grey {
+  border: 1px solid grey;
+}
+
+/* Flexbox Helpers */
 .flex {
   display: flex;
 }
@@ -15,13 +23,10 @@
   justify-content: center;
 }
 
+/* Backgrounds & Colors */
 .bg-black {
   background-color: black;
   color: white;
-}
-
-.invert {
-  filter: invert(1);
 }
 
 .bg-grey {
@@ -29,10 +34,15 @@
   color: white;
 }
 
-.rounded {
-  border-radius: 7px;
+.invert {
+  filter: invert(1);
 }
 
+span {
+  color: #b8b8c7;
+}
+
+/* Spacing */
 .m-1 {
   margin: 5px;
 }
@@ -41,6 +51,12 @@
   padding: 10px;
 }
 
+/* Borders & Radius */
+.rounded {
+  border-radius: 7px;
+}
+
+/* ========== SCROLLBAR STYLING ========== */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -62,12 +78,4 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
-}
-
-span {
-  color: #b8b8c7;
-}
-
-.border-grey {
-  border: 1px solid grey;
 }

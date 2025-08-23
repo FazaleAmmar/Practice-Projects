@@ -1,3 +1,4 @@
+/* ========== LEFT SIDEBAR ========== */
 .left {
   position: absolute;
   transition: left 0.5s;
@@ -19,31 +20,16 @@
   );
 }
 
-.footer {
-  width: 95%;
-}
-
-.right {
-  width: 100vw;
-  margin: 0;
-}
-
-.aboveBar {
-  flex-direction: column;
-  gap: 15px;
-}
-
-.seekBar {
-  width: 90%;
-  margin-left: 12px;
-}
-
-.menu {
-  display: inline-block;
+.library {
+  min-height: 67vh;
 }
 
 .songList {
   height: 50vh;
+}
+
+.footer {
+  width: 95%;
 }
 
 .close {
@@ -54,17 +40,19 @@
   cursor: pointer;
 }
 
+/* ========== RIGHT MAIN CONTENT ========== */
+.right {
+  width: 100vw;
+  margin: 0;
+}
+
 .cardContainer {
   justify-content: center;
   margin: 30px 0 0 0;
   padding-top: 15px;
 }
 
-.playBar {
-  height: fit-content;
-  width: 88%;
-}
-
+/* Playlist Cards */
 .card {
   width: 10rem;
   height: 17rem;
@@ -74,17 +62,29 @@
   font-size: 10px;
 }
 
+.play {
+  top: 200px;
+}
+
 .card:hover .play {
   opacity: 1;
   transform: translateY(-60px);
 }
 
-.play {
-  top: 200px;
+/* ========== PLAYBAR ========== */
+.playBar {
+  height: fit-content;
+  width: 88%;
 }
 
-.library {
-  min-height: 67vh;
+.seekBar {
+  width: 90%;
+  margin-left: 12px;
+}
+
+.aboveBar {
+  flex-direction: column;
+  gap: 15px;
 }
 
 .songInfo {
@@ -93,4 +93,9 @@
 
 .songTime {
   text-align: center;
+}
+
+/* ========== NAV / MENU ========== */
+.menu {
+  display: inline-block;
 }
