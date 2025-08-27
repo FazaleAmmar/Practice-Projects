@@ -73,10 +73,12 @@ body {
   bottom: 30%;
   right: 10%;
 }
+
 .bub3 {
   top: 30%;
   left: 90%;
 }
+
 .bub4 {
   top: 30%;
   left: 5%;
@@ -143,6 +145,12 @@ main {
   border: none;
   font-weight: 500;
   font-size: 25px;
+}
+
+.elements:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .zero {
@@ -261,6 +269,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu-items:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .multiply {
