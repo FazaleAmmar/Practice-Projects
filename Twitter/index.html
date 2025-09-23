@@ -15,6 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <title>X(Twitter).com</title>
   </head>
   <body class="bg-black text-white">
@@ -119,7 +120,157 @@
       <div class="second w-full border-gray-500 border border-y-black">
         Main Content
       </div>
-      <div class="third w-full">Suggestions</div>
+      <div class="third w-full ml-10 flex flex-col gap-5">
+        <div class="input flex items-center relative">
+          <span
+            class="material-symbols-outlined scale-50 text-gray-500 absolute left-2"
+          >
+            search
+          </span>
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Here"
+            class="text-gray-400 bg-[#2a2a2d] text-[10px] px-10 py-1.5 rounded-2xl w-60 outline-none"
+          />
+        </div>
+
+        <div
+          class="subscription bg-[#16181C] h-30 w-60 rounded-2xl flex flex-col justify-evenly items-start px-5"
+        >
+          <h2 class="font-extrabold">Subscribe To Premium</h2>
+          <p class="text-[10px]">
+            Subscribe to unlock new features and if eligible , recieve a share
+            of ads revenue.
+          </p>
+          <button class="bg-blue-600 w-28 p-1 rounded-4xl outline-0">
+            Subscribe
+          </button>
+        </div>
+
+        <div
+          class="happen h-70 w-60 z-10 rounded-2xl flex flex-col bg-[#16181C] items-center overflow-hidden"
+        >
+          <h2 class="font-extrabold m-3">What’s Happening</h2>
+
+          <div class="firstHappen flex items-center justify-start gap-10 w-50">
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="title font-bold text-[10px]">
+                Menswear Fashion Weeks
+              </div>
+              <div class="titleInfo text-[9px] text-gray-500">
+                Fashion . LIVE
+              </div>
+            </div>
+            <div class="image w-17 h-10 rounded">
+              <img
+                src="images/suggestions.jpg"
+                alt="Fashion Image"
+                class="rounded"
+              />
+            </div>
+          </div>
+          <div class="secondHappen flex items-center justify-between w-50">
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="titleInfo text-[9px] text-gray-500">
+                Trending in Pakistan
+              </div>
+              <div class="title font-bold text-[10px]">#PAKvsIND</div>
+              <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
+            </div>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="secondHappen flex items-center justify-between w-50">
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="titleInfo text-[9px] text-gray-500">
+                Trending in Pakistan
+              </div>
+              <div class="title font-bold text-[10px]">#PAKvsIND</div>
+              <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
+            </div>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="show w-full text-start pl-3">
+            <button
+              class="text-blue-500 outline-none border-0 text-[10px] cursor-pointer"
+            >
+              Show More....
+            </button>
+          </div>
+        </div>
+
+        <div class="follow flex flex-col bg-[#16181C] w-60 rounded-2xl h-50">
+          <h2 class="font-extrabold m-3">What to follow</h2>
+          <div class="ids flex justify-evenly my-1">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile1.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent">
+              <div class="name font-bold text-[10px]">Disha Patani</div>
+              <div class="userName text-[9px] text-gray-500">@disha_patani</div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="ids flex justify-evenly my-1">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile2.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent">
+              <div class="name font-bold text-[10px]">Fazal e Ammar</div>
+              <div class="userName text-[9px] text-gray-500">
+                @fazal_e_ammar
+              </div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="ids flex justify-evenly my-1">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile3.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent">
+              <div class="name font-bold text-[10px]">Ranbeer Kapur</div>
+              <div class="userName text-[9px] text-gray-500">
+                @ranbeer_kapur
+              </div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="show w-full text-start pl-3">
+            <button
+              class="text-blue-500 outline-none border-0 text-[10px] cursor-pointer"
+            >
+              Show More....
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
