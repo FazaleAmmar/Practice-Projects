@@ -20,6 +20,8 @@
   </head>
   <body class="bg-black text-white">
     <div class="container flex mx-auto">
+      <!-- NavBar -->
+
       <div class="first w-[70%]">
         <div class="logo">
           <svg
@@ -93,13 +95,11 @@
             <li class="flex justify-start items-center gap-1">
               <span class="material-symbols-outlined"> add_circle </span>Create
             </li>
-            <button class="bg-blue-600 w-28 p-2 rounded-xl outline-0">
+            <button class="bg-blue-400 w-28 p-2 rounded-xl outline-0">
               Post
             </button>
           </ul>
-          <div
-            class="id absolute bottom-1 right-1 w-50 flex cursor-pointer gap-1"
-          >
+          <div class="id fixed bottom-1 w-50 flex cursor-pointer gap-1">
             <div class="profile">
               <img
                 src="images/profile.jpg"
@@ -117,9 +117,199 @@
           </div>
         </div>
       </div>
+
+      <!-- Main Content -->
+
       <div class="second w-full border-gray-500 border border-y-black">
-        Main Content
+        <div
+          class="forNav flex items-center justify-between px-2 border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="forYou flex justify-evenly items-center w-100">
+            <h2 class="font-bold">For You</h2>
+            <h2 class="font-bold">Following</h2>
+          </div>
+          <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div
+          class="uploadPost flex items-start justify-between h-25 px-3 border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="pic flex items-start justify-center h-full pt-2">
+            <img
+              src="images/profile.jpg"
+              alt="profile"
+              class="w-10 rounded-[50%]"
+            />
+          </div>
+          <div
+            class="writeContent h-full w-80 flex flex-col justify-between pt-2 pl-2"
+          >
+            <div class="contentInput">
+              <input
+                type="text"
+                name="content"
+                placeholder="What's Happening?!"
+                class="outline-none"
+              />
+            </div>
+            <div
+              class="contentOptions flex gap-2 items-center justify-start text-[13px] p-2 text-blue-700"
+            >
+              <i class="fa-regular fa-image"></i>
+              <i class="fa-solid fa-list-ul"></i>
+              <i class="fa-regular fa-face-smile"></i>
+              <i class="fa-regular fa-calendar-days"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="postBtn h-full flex items-end">
+            <button class="bg-blue-400 w-20 p-1 rounded-4xl outline-0 mb-2">
+              Post
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile4.jpg"
+                alt="profile"
+                class="w-full rounded-[50%]"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Nisha Gupta
+                <span class="text-gray-500">@nishagupta</span>
+              </div>
+              <div class="postName text-[12px]">
+                The Calm Power of Nature: Why Green Spaces Heal the Mind
+              </div>
+            </div>
+            <div class="cardMenu">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post1.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
+            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
+            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
+            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
+              <div class="six">
+                <i class="fa-regular fa-share-from-square"></i>12k
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile5.jpg"
+                alt="profile"
+                class="w-full rounded-[50%]"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Aditi Mehta
+                <span class="text-gray-500">@aditimehta</span>
+              </div>
+              <div class="postName text-[12px]">
+                Discovering Beauty in the Small Details of the Natural World
+              </div>
+            </div>
+            <div class="cardMenu">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post2.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
+            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
+            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
+            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
+              <div class="six">
+                <i class="fa-regular fa-share-from-square"></i>12k
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile6.jpg"
+                alt="profile"
+                class="w-full rounded-[50%]"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Abhishek Kumar
+                <span class="text-gray-500">@abhishekkumar</span>
+              </div>
+              <div class="postName text-[12px]">
+                Exploring the Infinite Wonders of Our Galaxy
+              </div>
+            </div>
+            <div class="cardMenu">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post3.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
+            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
+            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
+            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
+              <div class="six">
+                <i class="fa-regular fa-share-from-square"></i>12k
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Suggestions  -->
+
       <div class="third w-full ml-10 flex flex-col gap-5">
         <div class="input flex items-center relative">
           <span
@@ -143,7 +333,7 @@
             Subscribe to unlock new features and if eligible , recieve a share
             of ads revenue.
           </p>
-          <button class="bg-blue-600 w-28 p-1 rounded-4xl outline-0">
+          <button class="bg-blue-400 w-28 p-1 rounded-4xl outline-0">
             Subscribe
           </button>
         </div>
