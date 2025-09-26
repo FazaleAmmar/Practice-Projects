@@ -24,35 +24,47 @@
 
       <div class="first w-[70%]">
         <div class="logo">
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            class="invert m-auto w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk"
-          >
-            <g>
-              <path
-                d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"
-              ></path>
-            </g>
-          </svg>
+          <a href="/">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              class="invert m-auto w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk hover:cursor-pointer"
+            >
+              <g>
+                <path
+                  d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"
+                ></path>
+              </g>
+            </svg>
+          </a>
         </div>
 
         <div class="sideBar flex justify-end relative h-screen">
           <ul class="flex flex-col text-xl space-y-7 space-x-7 mt-5">
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <span class="material-symbols-outlined"> home </span>Home
             </li>
-            <li class="flex justify-start items-cente gap-1">
+            <li
+              class="flex justify-start items-cente gap-1 hover:cursor-pointer active:font-bold"
+            >
               <span class="material-symbols-outlined"> search </span>Search
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <span class="material-symbols-outlined"> notifications </span
               >Notifications
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <span class="material-symbols-outlined"> mail </span>Mail
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <svg
                 class="invert"
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,10 +79,14 @@
                 ></path></svg
               >Grok
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <i class="fa-solid fa-user"></i>Profile
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -92,14 +108,18 @@
               </svg>
               Menu
             </li>
-            <li class="flex justify-start items-center gap-1">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
               <span class="material-symbols-outlined"> add_circle </span>Create
             </li>
-            <button class="bg-blue-400 w-28 p-2 rounded-xl outline-0">
+            <button
+              class="bg-blue-400 w-28 p-2 rounded-xl outline-0 hover:bg-blue-500 cursor-pointer active:bg-blue-600"
+            >
               Post
             </button>
           </ul>
-          <div class="id fixed bottom-1 w-50 flex cursor-pointer gap-1">
+          <div class="id fixed bottom-1 w-50 flex gap-1 hover:cursor-pointer">
             <div class="profile">
               <img
                 src="images/profile.jpg"
@@ -110,7 +130,11 @@
             <div class="nameContainer">
               <div class="name flex gap-5 items-center justify-between">
                 Fazal e Ammar
-                <i class="fa-solid fa-ellipsis"></i>
+                <div
+                  class="icon cursor-pointer h-5 w-5 flex items-center justify-center hover: p-2 rounded-[50%] hover:bg-gray-800"
+                >
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
               </div>
               <div class="userName text-sm text-gray-500">@fazal_e_ammar</div>
             </div>
@@ -125,8 +149,8 @@
           class="forNav flex items-center justify-between px-2 border border-y-gray-700 border-x-0 p-1 border-t-0"
         >
           <div class="forYou flex justify-evenly items-center w-100">
-            <h2 class="font-bold">For You</h2>
-            <h2 class="font-bold">Following</h2>
+            <h2 class="font-bold hover:cursor-pointer">For You</h2>
+            <h2 class="font-bold hover:cursor-pointer">Following</h2>
           </div>
           <i class="fa-solid fa-gear"></i>
         </div>
@@ -138,7 +162,7 @@
             <img
               src="images/profile.jpg"
               alt="profile"
-              class="w-10 rounded-[50%]"
+              class="w-10 rounded-[50%] hover:cursor-pointer"
             />
           </div>
           <div
@@ -155,15 +179,17 @@
             <div
               class="contentOptions flex gap-2 items-center justify-start text-[13px] p-2 text-blue-700"
             >
-              <i class="fa-regular fa-image"></i>
-              <i class="fa-solid fa-list-ul"></i>
-              <i class="fa-regular fa-face-smile"></i>
-              <i class="fa-regular fa-calendar-days"></i>
-              <i class="fa-solid fa-location-dot"></i>
+              <i class="fa-regular fa-image hover:cursor-pointer"></i>
+              <i class="fa-solid fa-list-ul hover:cursor-pointer"></i>
+              <i class="fa-regular fa-face-smile hover:cursor-pointer"></i>
+              <i class="fa-regular fa-calendar-days hover:cursor-pointer"></i>
+              <i class="fa-solid fa-location-dot hover:cursor-pointer"></i>
             </div>
           </div>
           <div class="postBtn h-full flex items-end">
-            <button class="bg-blue-400 w-20 p-1 rounded-4xl outline-0 mb-2">
+            <button
+              class="bg-blue-400 w-20 p-1 rounded-4xl outline-0 mb-2 hover:bg-blue-500 active:bg-blue-600 hover:cursor-pointer"
+            >
               Post
             </button>
           </div>
@@ -177,7 +203,7 @@
               <img
                 src="images/profile4.jpg"
                 alt="profile"
-                class="w-full rounded-[50%]"
+                class="w-full rounded-[50%] hover:cursor-pointer"
               />
             </div>
             <div
@@ -191,7 +217,9 @@
                 The Calm Power of Nature: Why Green Spaces Heal the Mind
               </div>
             </div>
-            <div class="cardMenu">
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
               <i class="fa-solid fa-ellipsis"></i>
             </div>
           </div>
@@ -201,15 +229,25 @@
           <div
             class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
           >
-            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
-            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
-            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
-            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>200k
+            </div>
 
             <div class="cardFooterLast flex justify-end">
-              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
-              <div class="six">
-                <i class="fa-regular fa-share-from-square"></i>12k
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
               </div>
             </div>
           </div>
@@ -223,7 +261,7 @@
               <img
                 src="images/profile5.jpg"
                 alt="profile"
-                class="w-full rounded-[50%]"
+                class="w-full rounded-[50%] hover:cursor-pointer"
               />
             </div>
             <div
@@ -237,7 +275,9 @@
                 Discovering Beauty in the Small Details of the Natural World
               </div>
             </div>
-            <div class="cardMenu">
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
               <i class="fa-solid fa-ellipsis"></i>
             </div>
           </div>
@@ -247,15 +287,25 @@
           <div
             class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
           >
-            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
-            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
-            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
-            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>200k
+            </div>
 
             <div class="cardFooterLast flex justify-end">
-              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
-              <div class="six">
-                <i class="fa-regular fa-share-from-square"></i>12k
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
               </div>
             </div>
           </div>
@@ -269,7 +319,7 @@
               <img
                 src="images/profile6.jpg"
                 alt="profile"
-                class="w-full rounded-[50%]"
+                class="w-full rounded-[50%] hover:cursor-pointer"
               />
             </div>
             <div
@@ -283,7 +333,9 @@
                 Exploring the Infinite Wonders of Our Galaxy
               </div>
             </div>
-            <div class="cardMenu">
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
               <i class="fa-solid fa-ellipsis"></i>
             </div>
           </div>
@@ -293,15 +345,25 @@
           <div
             class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
           >
-            <div class="one"><i class="fa-regular fa-comment"></i>112</div>
-            <div class="two"><i class="fa-solid fa-retweet"></i>110</div>
-            <div class="three"><i class="fa-regular fa-heart"></i>112k</div>
-            <div class="four"><i class="fa-solid fa-chart-simple"></i>200k</div>
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>220k
+            </div>
 
             <div class="cardFooterLast flex justify-end">
-              <div class="five"><i class="fa-regular fa-bookmark"></i></div>
-              <div class="six">
-                <i class="fa-regular fa-share-from-square"></i>12k
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
               </div>
             </div>
           </div>
@@ -311,9 +373,9 @@
       <!-- Suggestions  -->
 
       <div class="third w-full ml-10 flex flex-col gap-5">
-        <div class="input flex items-center relative">
+        <div class="input flex items-center relative h-10 hover:cursor-pointer">
           <span
-            class="material-symbols-outlined scale-50 text-gray-500 absolute left-2"
+            class="material-symbols-outlined scale-50 text-gray-500 absolute left-2 active:bg-black active:text-white"
           >
             search
           </span>
@@ -321,7 +383,7 @@
             type="search"
             name="search"
             placeholder="Search Here"
-            class="text-gray-400 bg-[#2a2a2d] text-[10px] px-10 py-1.5 rounded-2xl w-60 outline-none"
+            class="text-gray-400 bg-[#2a2a2d] text-[10px] px-10 py-1.5 rounded-2xl w-60 outline-none box-border focus:bg-black focus:text-white focus:border focus:border-white"
           />
         </div>
 
@@ -333,7 +395,9 @@
             Subscribe to unlock new features and if eligible , recieve a share
             of ads revenue.
           </p>
-          <button class="bg-blue-400 w-28 p-1 rounded-4xl outline-0">
+          <button
+            class="bg-blue-400 w-28 p-1 rounded-4xl outline-0 hover:bg-blue-500 hover:cursor-pointer active:bg-blue-600"
+          >
             Subscribe
           </button>
         </div>
@@ -343,7 +407,9 @@
         >
           <h2 class="font-extrabold m-3">What’s Happening</h2>
 
-          <div class="firstHappen flex items-center justify-start gap-10 w-50">
+          <div
+            class="firstHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
             <div class="content h-16 flex flex-col justify-center">
               <div class="title font-bold text-[10px]">
                 Menswear Fashion Weeks
@@ -360,7 +426,9 @@
               />
             </div>
           </div>
-          <div class="secondHappen flex items-center justify-between w-50">
+          <div
+            class="secondHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
             <div class="content h-16 flex flex-col justify-center">
               <div class="titleInfo text-[9px] text-gray-500">
                 Trending in Pakistan
@@ -368,9 +436,15 @@
               <div class="title font-bold text-[10px]">#PAKvsIND</div>
               <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
             </div>
-            <i class="fa-solid fa-ellipsis"></i>
+            <div
+              class="icon hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%]"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
           </div>
-          <div class="secondHappen flex items-center justify-between w-50">
+          <div
+            class="secondHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
             <div class="content h-16 flex flex-col justify-center">
               <div class="titleInfo text-[9px] text-gray-500">
                 Trending in Pakistan
@@ -378,7 +452,11 @@
               <div class="title font-bold text-[10px]">#PAKvsIND</div>
               <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
             </div>
-            <i class="fa-solid fa-ellipsis"></i>
+            <div
+              class="icon hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%]"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
           </div>
           <div class="show w-full text-start pl-3">
             <button
@@ -391,7 +469,7 @@
 
         <div class="follow flex flex-col bg-[#16181C] w-60 rounded-2xl h-50">
           <h2 class="font-extrabold m-3">What to follow</h2>
-          <div class="ids flex justify-evenly my-1">
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
             <div class="profilePic w-8 h-8">
               <img
                 src="images/profile1.jpg"
@@ -404,13 +482,13 @@
               <div class="userName text-[9px] text-gray-500">@disha_patani</div>
             </div>
             <button
-              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
             >
               Follow
             </button>
           </div>
 
-          <div class="ids flex justify-evenly my-1">
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
             <div class="profilePic w-8 h-8">
               <img
                 src="images/profile2.jpg"
@@ -425,13 +503,13 @@
               </div>
             </div>
             <button
-              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
             >
               Follow
             </button>
           </div>
 
-          <div class="ids flex justify-evenly my-1">
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
             <div class="profilePic w-8 h-8">
               <img
                 src="images/profile3.jpg"
@@ -446,7 +524,7 @@
               </div>
             </div>
             <button
-              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold"
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
             >
               Follow
             </button>
