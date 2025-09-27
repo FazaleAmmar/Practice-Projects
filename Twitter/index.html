@@ -19,10 +19,12 @@
     <title>X(Twitter).com</title>
   </head>
   <body class="bg-black text-white">
-    <div class="container flex mx-auto">
+    <div
+      class="container lg:w-[100%] md:w-[85%] flex mx-auto sm:mx-0 lg:mx-auto md:mx-[12%]"
+    >
       <!-- NavBar -->
 
-      <div class="first w-[70%]">
+      <div class="first w-[20%] sm:w-[14%] lg:w-[70%]">
         <div class="logo">
           <a href="/">
             <svg
@@ -39,28 +41,33 @@
           </a>
         </div>
 
-        <div class="sideBar flex justify-end relative h-screen">
-          <ul class="flex flex-col text-xl space-y-7 space-x-7 mt-5">
+        <div
+          class="sideBar flex justify-center md:justify-end relative h-screen"
+        >
+          <ul class="flex flex-col text-xl space-y-7 md:space-x-7 mt-5">
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
             >
-              <span class="material-symbols-outlined"> home </span>Home
+              <span class="material-symbols-outlined"> home </span>
+              <span class="hidden md:block">Home</span>
             </li>
             <li
               class="flex justify-start items-cente gap-1 hover:cursor-pointer active:font-bold"
             >
-              <span class="material-symbols-outlined"> search </span>Search
+              <span class="material-symbols-outlined"> search </span>
+              <span class="hidden md:block">Search</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
             >
-              <span class="material-symbols-outlined"> notifications </span
-              >Notifications
+              <span class="material-symbols-outlined"> notifications </span>
+              <span class="hidden md:block">Notifications</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
             >
-              <span class="material-symbols-outlined"> mail </span>Mail
+              <span class="material-symbols-outlined"> mail </span>
+              <span class="hidden md:block">Mail</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
@@ -76,13 +83,15 @@
               >
                 <path
                   d="M18.542 30.532l15.956-11.776c.783-.576 1.902-.354 2.274.545 1.962 4.728 1.084 10.411-2.819 14.315-3.903 3.901-9.333 4.756-14.299 2.808l-5.423 2.511c7.778 5.315 17.224 4 23.125-1.903 4.682-4.679 6.131-11.058 4.775-16.812l.011.011c-1.966-8.452.482-11.829 5.501-18.735C47.759 1.332 47.88 1.166 48 1l-6.602 6.599V7.577l-22.86 22.958M15.248 33.392c-5.582-5.329-4.619-13.579.142-18.339 3.521-3.522 9.294-4.958 14.331-2.847l5.412-2.497c-.974-.704-2.224-1.46-3.659-1.994-6.478-2.666-14.238-1.34-19.505 3.922C6.904 16.701 5.31 24.488 8.045 31.133c2.044 4.965-1.307 8.48-4.682 12.023C2.164 44.411.967 45.67 0 47l15.241-13.608"
-                ></path></svg
-              >Grok
+                ></path>
+              </svg>
+              <span class="hidden md:block">Grok</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
             >
-              <i class="fa-solid fa-user"></i>Profile
+              <i class="fa-solid fa-user"></i>
+              <span class="hidden md:block">Profile</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
@@ -106,20 +115,23 @@
                 <circle cx="12" cy="12" r="1.5" fill="white" />
                 <circle cx="15" cy="12" r="1.5" fill="white" />
               </svg>
-              Menu
+              <span class="hidden md:block">Menu</span>
             </li>
             <li
               class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
             >
-              <span class="material-symbols-outlined"> add_circle </span>Create
+              <span class="material-symbols-outlined"> add_circle </span>
+              <span class="hidden md:block">Create</span>
             </li>
             <button
-              class="bg-blue-400 w-28 p-2 rounded-xl outline-0 hover:bg-blue-500 cursor-pointer active:bg-blue-600"
+              class="bg-blue-400 hidden md:block md:w-28 p-2 rounded-xl outline-0 hover:bg-blue-500 cursor-pointer active:bg-blue-600"
             >
               Post
             </button>
           </ul>
-          <div class="id fixed bottom-1 w-50 flex gap-1 hover:cursor-pointer">
+          <div
+            class="id fixed bottom-1 w-50 justify-center items-center flex gap-1 hover:cursor-pointer md:scale-75"
+          >
             <div class="profile">
               <img
                 src="images/profile.jpg"
@@ -127,7 +139,7 @@
                 class="w-10 rounded-[50%]"
               />
             </div>
-            <div class="nameContainer">
+            <div class="nameContainer hidden md:block">
               <div class="name flex gap-5 items-center justify-between">
                 Fazal e Ammar
                 <div
@@ -144,21 +156,25 @@
 
       <!-- Main Content -->
 
-      <div class="second w-full border-gray-500 border border-y-black">
+      <div
+        class="second w-[80%] md:w-full border-gray-500 border border-y-black"
+      >
         <div
-          class="forNav flex items-center justify-between px-2 border border-y-gray-700 border-x-0 p-1 border-t-0"
+          class="forNav flex items-center justify-between px-2 border border-y-gray-700 border-x-0 p-1 border-t-0 sticky top-0 bg-transparent backdrop-blur-md z-10"
         >
           <div class="forYou flex justify-evenly items-center w-100">
             <h2 class="font-bold hover:cursor-pointer">For You</h2>
             <h2 class="font-bold hover:cursor-pointer">Following</h2>
           </div>
-          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-gear hover:cursor-pointer"></i>
         </div>
 
         <div
           class="uploadPost flex items-start justify-between h-25 px-3 border border-y-gray-700 border-x-0 p-1 border-t-0"
         >
-          <div class="pic flex items-start justify-center h-full pt-2">
+          <div
+            class="pic hidden md:flex items-start justify-center h-full pt-2"
+          >
             <img
               src="images/profile.jpg"
               alt="profile"
@@ -188,7 +204,7 @@
           </div>
           <div class="postBtn h-full flex items-end">
             <button
-              class="bg-blue-400 w-20 p-1 rounded-4xl outline-0 mb-2 hover:bg-blue-500 active:bg-blue-600 hover:cursor-pointer"
+              class="bg-blue-400 w-16 lg:w-20 p-1 rounded-4xl outline-0 mb-2 hover:bg-blue-500 active:bg-blue-600 hover:cursor-pointer"
             >
               Post
             </button>
@@ -207,7 +223,7 @@
               />
             </div>
             <div
-              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
             >
               <div class="profileName font-bold text-sm">
                 Nisha Gupta
@@ -236,10 +252,13 @@
               <i class="fa-solid fa-retweet"></i>
             </div>
             <div class="three hover:cursor-pointer">
-              <i class="fa-regular fa-heart"></i>
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
             </div>
             <div class="four hover:cursor-pointer">
-              <i class="fa-solid fa-chart-simple"></i>200k
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">200k</span>
             </div>
 
             <div class="cardFooterLast flex justify-end">
@@ -265,7 +284,7 @@
               />
             </div>
             <div
-              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
             >
               <div class="profileName font-bold text-sm">
                 Aditi Mehta
@@ -294,10 +313,13 @@
               <i class="fa-solid fa-retweet"></i>
             </div>
             <div class="three hover:cursor-pointer">
-              <i class="fa-regular fa-heart"></i>
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
             </div>
             <div class="four hover:cursor-pointer">
-              <i class="fa-solid fa-chart-simple"></i>200k
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">200k</span>
             </div>
 
             <div class="cardFooterLast flex justify-end">
@@ -323,7 +345,7 @@
               />
             </div>
             <div
-              class="cardName text-sm flex flex-col items-start justify-center w-80 gap-1.5"
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
             >
               <div class="profileName font-bold text-sm">
                 Abhishek Kumar
@@ -352,10 +374,13 @@
               <i class="fa-solid fa-retweet"></i>
             </div>
             <div class="three hover:cursor-pointer">
-              <i class="fa-regular fa-heart"></i>
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
             </div>
             <div class="four hover:cursor-pointer">
-              <i class="fa-solid fa-chart-simple"></i>220k
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">220k</span>
             </div>
 
             <div class="cardFooterLast flex justify-end">
@@ -372,8 +397,10 @@
 
       <!-- Suggestions  -->
 
-      <div class="third w-full ml-10 flex flex-col gap-5">
-        <div class="input flex items-center relative h-10 hover:cursor-pointer">
+      <div class="third w-full ml-1 lg:ml-10 md:flex flex-col gap-5 hidden">
+        <div
+          class="input flex items-center relative w-0 lg:w-50 h-10 hover:cursor-pointer"
+        >
           <span
             class="material-symbols-outlined scale-50 text-gray-500 absolute left-2 active:bg-black active:text-white"
           >
@@ -388,10 +415,12 @@
         </div>
 
         <div
-          class="subscription bg-[#16181C] h-30 w-60 rounded-2xl flex flex-col justify-evenly items-start px-5"
+          class="subscription bg-[#16181C] h-30 w-48 lg:w-60 rounded-2xl flex flex-col justify-evenly items-start px-5"
         >
-          <h2 class="font-extrabold">Subscribe To Premium</h2>
-          <p class="text-[10px]">
+          <h2 class="font-extrabold text-[12px] lg:text-[16px]">
+            Subscribe To Premium
+          </h2>
+          <p class="text-[8px] lg:text-[10px]">
             Subscribe to unlock new features and if eligible , recieve a share
             of ads revenue.
           </p>
@@ -403,15 +432,15 @@
         </div>
 
         <div
-          class="happen h-70 w-60 z-10 rounded-2xl flex flex-col bg-[#16181C] items-center overflow-hidden"
+          class="happen h-70 w-48 lg:w-60 z-10 rounded-2xl flex flex-col bg-[#16181C] items-center overflow-hidden"
         >
-          <h2 class="font-extrabold m-3">What’s Happening</h2>
+          <h2 class="font-bold lg:font-extrabold m-3">What’s Happening</h2>
 
           <div
-            class="firstHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+            class="firstHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
           >
             <div class="content h-16 flex flex-col justify-center">
-              <div class="title font-bold text-[10px]">
+              <div class="title lg:font-bold text-[10px]">
                 Menswear Fashion Weeks
               </div>
               <div class="titleInfo text-[9px] text-gray-500">
@@ -427,13 +456,13 @@
             </div>
           </div>
           <div
-            class="secondHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+            class="secondHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
           >
             <div class="content h-16 flex flex-col justify-center">
               <div class="titleInfo text-[9px] text-gray-500">
                 Trending in Pakistan
               </div>
-              <div class="title font-bold text-[10px]">#PAKvsIND</div>
+              <div class="title lg:font-bold text-[10px]">#PAKvsIND</div>
               <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
             </div>
             <div
@@ -443,13 +472,13 @@
             </div>
           </div>
           <div
-            class="secondHappen flex items-center justify-between px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+            class="thirdHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
           >
             <div class="content h-16 flex flex-col justify-center">
               <div class="titleInfo text-[9px] text-gray-500">
                 Trending in Pakistan
               </div>
-              <div class="title font-bold text-[10px]">#PAKvsIND</div>
+              <div class="title lg:font-bold text-[10px]">#PAKvsIND</div>
               <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
             </div>
             <div
@@ -467,8 +496,10 @@
           </div>
         </div>
 
-        <div class="follow flex flex-col bg-[#16181C] w-60 rounded-2xl h-50">
-          <h2 class="font-extrabold m-3">What to follow</h2>
+        <div
+          class="follow flex flex-col bg-[#16181C] w-48 lg:w-60 rounded-2xl h-50"
+        >
+          <h2 class="lg:font-extrabold m-3">What to follow</h2>
           <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
             <div class="profilePic w-8 h-8">
               <img
@@ -477,7 +508,7 @@
                 class="w-full object-cover rounded-md"
               />
             </div>
-            <div class="profileContent">
+            <div class="profileContent hidden lg:block">
               <div class="name font-bold text-[10px]">Disha Patani</div>
               <div class="userName text-[9px] text-gray-500">@disha_patani</div>
             </div>
@@ -496,7 +527,7 @@
                 class="w-full object-cover rounded-md"
               />
             </div>
-            <div class="profileContent">
+            <div class="profileContent hidden lg:block">
               <div class="name font-bold text-[10px]">Fazal e Ammar</div>
               <div class="userName text-[9px] text-gray-500">
                 @fazal_e_ammar
@@ -517,7 +548,7 @@
                 class="w-full object-cover rounded-md"
               />
             </div>
-            <div class="profileContent">
+            <div class="profileContent hidden lg:block">
               <div class="name font-bold text-[10px]">Ranbeer Kapur</div>
               <div class="userName text-[9px] text-gray-500">
                 @ranbeer_kapur
