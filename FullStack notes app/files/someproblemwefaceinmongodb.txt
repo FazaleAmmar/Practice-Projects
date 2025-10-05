@@ -1,1 +1,0 @@
-the problems we face in mongodb is the hell

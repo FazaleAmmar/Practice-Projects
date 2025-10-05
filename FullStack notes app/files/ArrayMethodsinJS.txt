@@ -1,1 +1,0 @@
-the first one is array.map. The second one is array.filter. The third one is arry.reduce.

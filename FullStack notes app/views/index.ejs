@@ -32,8 +32,17 @@
       <div class="tasks p-10 flex flex-wrap gap-4">
         <% if (files.length > 0) { %> <% files.forEach(element => { %>
         <div class="task min-w-72 px-3 py-4 bg-zinc-800 rounded-md text-white">
-          <h1 class="text-white text-3xl tracking-tighter"><%= element %></h1>
-          <a class="text-blue-500 inline-block mt-3" href="">Read More...</a>
+          <h1 class="text-white text-3xl tracking-tighter text-center">
+            <%= element %>
+          </h1>
+          <div class="flex w-full justify-evenly items-center mt-3">
+            <a class="text-blue-500 inline-block" href="/files/<%= element %>">
+              Read More...
+            </a>
+            <a class="text-zinc-500" href="/edit/<%= element %>"
+              >edit filename</a
+            >
+          </div>
         </div>
         <% }) %> <% } else { %>
         <h3 class="text-zinc-800 text-3xl tracking-tighter font-bold">
