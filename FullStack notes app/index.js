@@ -26,6 +26,12 @@ app.get("/edit/:filename", (req, res) => {
   res.render("edit", { filename: req.params.filename });
 });
 
+app.get("/delete/:filename", (req, res) => {
+  fs.unlink(`./files/${req.params.filename}`, (err) => {
+    res.redirect("/");
+  });
+});
+
 app.post("/create", (req, res) => {
   fs.writeFile(
     `./files/${req.body.title.split(" ").join("")}.txt`,
