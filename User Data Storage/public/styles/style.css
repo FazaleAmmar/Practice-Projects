@@ -18,8 +18,6 @@
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
@@ -198,9 +196,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .left-10 {
-    left: calc(var(--spacing) * 10);
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -222,11 +217,17 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  .ml-20 {
+    margin-left: calc(var(--spacing) * 20);
   }
   .flex {
     display: flex;
@@ -237,11 +238,8 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-72 {
-    height: calc(var(--spacing) * 72);
-  }
-  .h-82 {
-    height: calc(var(--spacing) * 82);
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
@@ -251,6 +249,9 @@
   }
   .w-30 {
     width: calc(var(--spacing) * 30);
+  }
+  .w-39 {
+    width: calc(var(--spacing) * 39);
   }
   .w-60 {
     width: calc(var(--spacing) * 60);
@@ -276,17 +277,14 @@
   .items-center {
     align-items: center;
   }
-  .items-start {
-    align-items: flex-start;
-  }
-  .justify-center {
-    justify-content: center;
-  }
   .justify-start {
     justify-content: flex-start;
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -319,9 +317,6 @@
   .object-cover {
     object-fit: cover;
   }
-  .object-center {
-    object-position: center;
-  }
   .object-top {
     object-position: top;
   }
@@ -331,8 +326,23 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .text-center {
     text-align: center;

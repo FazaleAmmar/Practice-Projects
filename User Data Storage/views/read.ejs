@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <title>Home</title>
+    <title>Read</title>
   </head>
   <body class="h-full w-full bg-zinc-900 p-10">
     <div class="container h-full w-full bg-zinc-900 text-white relative">
@@ -31,7 +31,7 @@
           <div class="email text-zinc-600"><%= user.email %></div>
 
           <div class="edit">
-            <a class="text-green-500" href="/edit">Edit</a>
+            <a class="text-green-500" href="/edit/<%= user.id %>">Edit</a>
           </div>
           <div class="delete">
             <a class="text-red-500" href="/delete/<%= user.id %>">Delete</a>
