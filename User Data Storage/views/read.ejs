@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full bg-zinc-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Home</title>
+  </head>
+  <body class="h-full w-full bg-zinc-900 p-10">
+    <div class="container h-full w-full bg-zinc-900 text-white relative">
+      <h1 class="text-5xl font-bold text-center mb-4">All Cards</h1>
+      <hr class="border-zinc-500 mb-10" />
+
+      <div class="users flex gap-4 flex-wrap text-center">
+
+        <% if(users.length > 0){ %>
+          <% users.forEach(function(user) { %>
+        <div
+          class="user border border-gray-600 w-68 h-100 flex flex-col justify-start items-center p-4 rounded-lg"
+        >
+          <div
+            class="image bg-zinc-500 h-full w-full rounded-lg overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-cover object-top"
+              src="<%= user.image %>"
+              alt=""
+            />
+          </div>
+          <div class="name mt-2"><%= user.name %></div>
+          <div class="email text-zinc-600"><%= user.email %></div>
+
+          <div class="edit">
+            <a class="text-green-500" href="/edit">Edit</a>
+          </div>
+          <div class="delete">
+            <a class="text-red-500" href="/delete/<%= user.id %>">Delete</a>
+          </div>
+        </div>
+        <% }) %>
+        <% } else { %>
+          <h3 class="text-zinc-700 font-bold text-3xl">No Users There!</h3>
+       <% } %>
+
+        
+      </div>
+
+      <a class="absolute bottom-0 left-0 bg-zinc-500 text-blue-500 p-2 rounded-md" href="/">Back to home</a>
+    </div>
+  </body>
+</html>
