@@ -27,8 +27,20 @@ app.get("/logout", (req, res) => {
 });
 
 app.get("/profile", isLoggedIn, async (req, res) => {
-  let user = await userModel.findById(req.user.id);
-  res.send("Welcome back " + user.username);
+  let user = await userModel.findOne({ email: req.user.email });
+  res.render("profile", { user });
+});
+
+app.post("/post", isLoggedIn, async (req, res) => {
+  let user = await userModel.findOne({ email: req.user.email });
+  let { content } = req.body;
+
+  let post = await postModel.create({
+    user: user._id,
+    content: content,
+  });
+
+  user.post.push(post._id);
 });
 
 app.post("/register", async (req, res) => {
