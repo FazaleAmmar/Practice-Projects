@@ -14,7 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.render("index");
+  if (req.cookies.token) res.redirect("/profile");
+  else res.render("index");
 });
 
 app.get("/login", (req, res) => {
@@ -31,6 +32,29 @@ app.get("/profile", isLoggedIn, async (req, res) => {
     .findOne({ email: req.user.email })
     .populate("posts");
   res.render("profile", { user });
+});
+
+app.get("/like/:id", isLoggedIn, async (req, res) => {
+  let post = await postModel.findOne({ _id: req.params.id }).populate("user");
+
+  if (post.likes.includes(req.user.id)) {
+    post.likes.splice(post.likes.indexOf(req.user.id), 1);
+  } else {
+    post.likes.push(req.user.id);
+  }
+
+  await post.save();
+  res.redirect("/profile");
+});
+
+app.get("/edit/:id", isLoggedIn, async (req, res) => {
+  let post = await postModel.findById(req.params.id);
+  res.render("edit", { post });
+});
+
+app.get("/delete/:id", isLoggedIn, async (req, res) => {
+  let post = await postModel.findByIdAndDelete(req.params.id);
+  res.redirect("/profile");
 });
 
 app.post("/post", isLoggedIn, async (req, res) => {
@@ -88,6 +112,14 @@ app.post("/login", async (req, res) => {
     }
   });
 });
+
+app.post("/update/:id", isLoggedIn, async(req, res) => {
+  let { newcontent } = req.body;
+  let post = await postModel.findById(req.params.id);
+  post.content = newcontent;
+  await post.save();
+  res.redirect("/profile");
+})
 
 function isLoggedIn(req, res, next) {
   if (req.cookies.token === "") res.send("You are not logged in");
