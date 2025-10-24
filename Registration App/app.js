@@ -6,9 +6,7 @@ const postModel = require("./models/post");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
-const path = require("path");
-const multer = require("multer");
+const upload = require("./config/multerconfig");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -16,27 +14,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./public/images/uploads");
-  },
-  filename: function (req, file, cb) {
-    crypto.randomBytes(12, (err, buffer) => {
-      const fn = buffer.toString("hex") + path.extname(file.originalname);
-      cb(null, fn);
-    });
-  },
-});
-
-const upload = multer({ storage: storage });
-
 app.get("/", (req, res) => {
   if (req.cookies.token) res.redirect("/profile");
   else res.render("index");
-});
-
-app.get("/test", (req, res) => {
-  res.render("test");
 });
 
 app.get("/login", (req, res) => {
@@ -76,6 +56,10 @@ app.get("/edit/:id", isLoggedIn, async (req, res) => {
 app.get("/delete/:id", isLoggedIn, async (req, res) => {
   let post = await postModel.findByIdAndDelete(req.params.id);
   res.redirect("/profile");
+});
+
+app.get("/profile/upload", isLoggedIn, (req, res) => {
+  res.render("upload");
 });
 
 app.post("/post", isLoggedIn, async (req, res) => {
@@ -142,9 +126,12 @@ app.post("/update/:id", isLoggedIn, async (req, res) => {
   res.redirect("/profile");
 });
 
-app.post("/upload", upload.single("image"), (req, res) => {
-  console.log(req.file);
-  res.redirect("/test");
+app.post("/upload", isLoggedIn, upload.single("image"), async (req, res) => {
+  let user = await userModel.findOne({ email: req.user.email });
+  user.profilepic = req.file.filename;
+  
+  await user.save();
+  res.redirect("/profile");
 });
 
 function isLoggedIn(req, res, next) {
