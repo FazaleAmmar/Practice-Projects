@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="img h-30 w-full flex items-center justify-center bg-amber-100">
         <a href="/">
           <img
-            className="h-25 w-80 object-center object-cover"
+            className="h-25 w-80 object-center object-cover cursor-pointer"
             src="/Todex_logo.png"
             alt="todex logo"
           />
