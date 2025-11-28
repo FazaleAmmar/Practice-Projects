@@ -1,12 +1,13 @@
 import Navbar from "./components/Navbar";
+import InputTab from "./components/InputTab";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <h1 className="text-white">
-        This is Todex.
-      </h1>
+      <div className="container h-screen w-full bg-[#f7f8fa]">
+        <Navbar />
+        <InputTab />
+      </div>
     </>
   );
 }
